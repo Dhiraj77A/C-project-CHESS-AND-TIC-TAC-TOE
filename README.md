@@ -57,4 +57,43 @@ Both games are interactive and include visual feedback using mouse input.
 ---
 
 ## 📁 Project Structure
+Cpp-Classical-Games/
+├── assets/ # Fonts and images for GUI
+├── src/
+│ ├── tictactoe/ # Tic Tac Toe logic and UI
+│ │ ├── Game.cpp
+│ │ └── Game.hpp
+│ ├── chess/ # Chess logic and UI
+│ │ ├── Game.cpp
+│ │ └── Game.hpp
+│ └── main.cpp # Entry point with game launcher
+├── CMakeLists.txt # Optional build configuration
+└── README.md # You're here!
 
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+- C++ compiler (g++ or MSVC)
+- SFML (version 2.5 or later)
+
+Download SFML from:  
+🔗 https://www.sfml-dev.org/download.php
+
+Or follow setup instructions:  
+🔗 https://www.sfml-dev.org/tutorials/
+
+---
+
+### 💻 Build Instructions
+
+#### ✅ Method 1: Using g++
+```bash
+g++ -std=c++17 src/main.cpp src/chess/*.cpp src/tictactoe/*.cpp \
+-I<path_to_sfml>/include -L<path_to_sfml>/lib \
+-lsfml-graphics -lsfml-window -lsfml-system -o classical_games
+
+./classical_games
